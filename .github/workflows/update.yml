@@ -15,7 +15,8 @@ jobs:
       run: |
         set -x
         # Run the script
-        git submodule update --remote
+        git submodule init
+        git submodule update
         ls -a UZIP.js
         cp UZIP.js/UZIP.js index.js
         echo "export default UZIP;" >> index.js
