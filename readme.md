@@ -9,13 +9,15 @@ import UZIP from 'https://tomashubelbauer.github.io/esm-uzip-js/index.js';
 // Usage as per https://github.com/photopea/UZIP.js#interface
 ```
 
-## Stale?
+## How Does It Work / Is It Stale?
 
-The UZIP.js submodule and the `index.js` file which is created by taking the `UZIP.js` file
-from the submodule and appending `export default UZIP;` to it are both updated daily using a
-GitHub Actions workflow script found in
-[`.github/worflows/update.yml`](.github/worflows/update.yml).
+This repository updates its UZIP.js submodule automatically every day and while doing that
+copies the `UZIP.js` file from it to `index.js` appending `export default UZIP;` and the
+current date.
 
-## To-Do
+A GitHub Actions workflow is used to accomplish that:
+[`.github/worflows/update.yml`](.github/worflows/update.yml)
 
-### Ensure not enqueing GitHub Pages build explicitly still serves updated `index.js`
+GitHub Pages are used to serve the contents of the repository, this is better than using
+the *Raw* option on GitHub, because the file also has a correct MIME type and thus can be
+used as an ESM module.
