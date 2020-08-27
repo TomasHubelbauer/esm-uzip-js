@@ -1,0 +1,3 @@
+[submodule "UZIP.js"]
+	path = UZIP.js
+	url = https://github.com/photopea/UZIP.js.git
