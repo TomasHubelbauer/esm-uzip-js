@@ -5,7 +5,7 @@ This is the [UZIP.js](https://github.com/photopea/UZIP.js) library provided as a
 ## Usage
 
 ```
-import UZIP from 'https://tomashubelbauer.github.io/esm-uzip-js/UZIP.js';
+import UZIP from 'https://tomashubelbauer.github.io/esm-uzip-js/index.js';
 // Usage as per https://github.com/photopea/UZIP.js#interface
 ```
 

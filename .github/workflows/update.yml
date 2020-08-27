@@ -1,0 +1,22 @@
+on:
+  push:
+    branches:
+    # Limit to the `master` branch
+    - master
+  schedule:
+    # Run daily
+    - cron:  '0 0 * * *'
+jobs:
+  github-actions:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Run the workflow
+      run: |
+        set -x
+        # Run the script
+        git submodule update --remote
+        cp UZIP.js/UZIP.js index.js
+        echo "export default UZIP;" >> index.js
+        git status
+        git diff
