@@ -1,5 +1,7 @@
 # ESM UZIP.js
 
+![](https://github.com/tomashubelbauer/esm-uzip-js/workflows/.github/workflows/update.yml/badge.svg)
+
 This is the [UZIP.js](https://github.com/photopea/UZIP.js) library provided as an ESM package.
 
 ## Usage
