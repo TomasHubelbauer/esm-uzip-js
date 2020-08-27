@@ -11,22 +11,11 @@ import UZIP from 'https://tomashubelbauer.github.io/esm-uzip-js/index.js';
 
 ## Stale?
 
-As of now, the UZIP.js library is added as a submodule and updating it is done manually by
-updating the submodule. This reflects on the GitHub Pages site from which the ESM library
-is being referenced.
-
-In the futute, I plan on introducing a GitHub Actions workflow which either automatically
-updates the submodule daily or notifies me first so that I can consider the changes and
-update myself.
+The UZIP.js submodule and the `index.js` file which is created by taking the `UZIP.js` file
+from the submodule and appending `export default UZIP;` to it are both updated daily using a
+GitHub Actions workflow script found in
+[`.github/worflows/update.yml`](.github/worflows/update.yml).
 
 ## To-Do
 
-### Develop a GitHub Actions workflow to update the UZIP.js Git submodule daily
-
-### Copy `UZIP.js` to the root and add the `export default UZIP` line to it to make it ESM
-
-Right now I'm just hosting the file using my GitHub Pages, but it is not an ESM module yet.
-It looks like it will be better to not use the submodule and just clone, edit and commit
-the changed version of `UZIP.js` but I kinda like how the submodule immediately shows what
-version of UZIP.js is being used so I might keep using the submodule and just add UZIP.js
-to the root alongside of it with the only patch being the export line.
+### Ensure not enqueing GitHub Pages build explicitly still serves updated `index.js`
