@@ -18,7 +18,7 @@ copies the `UZIP.js` file from it to `index.js` appending `export default UZIP;`
 current date.
 
 A GitHub Actions workflow is used to accomplish that:
-[`.github/worflows/update.yml`](.github/worflows/update.yml)
+[`.github/worflows/update.yml`](.github/workflows/update.yml)
 
 GitHub Pages are used to serve the contents of the repository, this is better than using
 the *Raw* option on GitHub, because the file also has a correct MIME type and thus can be
