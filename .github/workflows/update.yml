@@ -28,7 +28,6 @@ jobs:
         git submodule update
         cp UZIP.js/UZIP.js index.js
         echo "export default UZIP;" >> index.js
-        echo // `date -Iseconds` >> index.js
 
         # Authenticate with GitHub using the out-of-the-box workflow PAT
         # (The commit using this PAT for authentication won't build GitHub Pages)
