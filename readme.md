@@ -27,3 +27,9 @@ to the UZIP repository to see that the submodule is up to date with that repo.
 GitHub Pages are used to serve the contents of the repository, this is better
 than using the *Raw* option on GitHub, because the file also has a correct MIME
 type and thus can be used as an ESM module.
+
+## To-Do
+
+### Purge the timestamp-only commits from the history
+
+I've rethought adding them and they have polluted the history somewhat.
