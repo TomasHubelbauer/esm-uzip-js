@@ -2,7 +2,6 @@ name: main
 on:
   push:
   schedule:
-    # Run daily
     - cron:  '0 0 * * *'
 jobs:
   main:
@@ -11,7 +10,7 @@ jobs:
     - name: Check out the main branch
       uses: actions/checkout@v3
       with:
-        ref: master
+        ref: main
     - name: Run the workflow
       run: |
         set -e
